@@ -53,7 +53,9 @@ function HomeScreen({ navigation }) {
           >
             <Button
               title="Get updates from Mario's Pizza"
-              onPress={() => navigation.navigate("Welcome", {})}
+              onPress={() =>
+                navigation.navigate("Welcome", { userEmail: userEmail })
+              }
               block
               bordered
               primary
@@ -65,7 +67,8 @@ function HomeScreen({ navigation }) {
   );
 }
 
-function WelcomeScreen({ navigation }) {
+function WelcomeScreen({ route }) {
+  const { userEmail } = route.params;
   return (
     <View
       style={{
@@ -75,16 +78,7 @@ function WelcomeScreen({ navigation }) {
         backgroundColor: "#cd212a",
       }}
     >
-      <Button
-        title="Welcome to Mario's
-        We will send updates to { userEmail }"
-        onPress={() =>
-          navigation.navigate("Welcome", { userEmail: Text, MyName: Text })
-        }
-        block
-        bordered
-        primary
-      ></Button>
+      <Text>Welcome to Mario's We will send updates to {userEmail}</Text>
     </View>
   );
 }
