@@ -28,6 +28,6 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": "This is My Pizza App for Nigh class"
+    "description": "This is My Pizza App for Night class working except for email"
   }
 }
